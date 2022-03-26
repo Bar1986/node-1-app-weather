@@ -11,7 +11,7 @@ weatherEvent.addEventListener('submit',(e)=>{
    const  location = searchLocation.value
    forecastVal.textContent = 'Loading...'
    forecastVal.textContent =  ''
-    fetch('http://localhost:3000/weather?address='+ encodeURIComponent(searchLocation.value)).then((response)=>{
+    fetch('/weather?address='+ encodeURIComponent(searchLocation.value)).then((response)=>{
         
     response.json().then((data)=>{
         
