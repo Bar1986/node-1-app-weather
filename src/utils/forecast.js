@@ -12,9 +12,12 @@ const forecast = (latitude,longtitude,callBack) => {
         }else{
             callBack(undefined,{
                 observationTime : body.current.observation_time,
-                weatherDescription: body.current.weather_descriptions[0]
+                weatherDescription: body.current.weather_descriptions[0],
+                feelslike : body.current.feelslike
+                
             })
         }
+        
     })
 } 
 module.exports = forecast
